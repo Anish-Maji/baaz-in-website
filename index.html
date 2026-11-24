@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Baaz — Building Mobility Infrastructure</title>
+  <link rel="preload" href="assets/hero/hero-bg.png" as="image">
+  <link rel="preload" href="assets/hero/hero-foreground.png" as="image">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.min.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <!-- Captions that appear while you fly through the clouds. Edit the list in main.js (CAPTIONS). -->
+  <div id="captions" aria-live="polite"></div>
+
+  <!-- ===== Hero (Figma node 2335:32). Slides away as you scroll into the clouds. ===== -->
+  <section class="hero" id="hero" aria-label="Introduction">
+    <img class="hero__bg" src="assets/hero/hero-bg.png" alt="" draggable="false">
+
+    <div class="hero__title-wrap">
+      <h1 class="hero__title">BUILDING MOBILITY<br aria-hidden="true"> INFRASTRUCTURE</h1>
+    </div>
+
+    <!-- rider, scooter and swap station cut-out: sits above the headline -->
+    <img class="hero__fg" src="assets/hero/hero-foreground.png"
+         alt="A delivery rider in rain gear on an orange Baaz electric scooter next to a Baaz Swap battery station"
+         draggable="false">
+
+    <div class="hero__content">
+      <p class="hero__lede">Electric scooters, 60-second battery swaps and on-road servicing for India's delivery riders. One weekly plan.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#how-it-works">See how Baaz works</a>
+        <a class="btn btn--secondary" href="#partner">Partner with us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Nav bar (Figma nodes 2335:43 – 2335:55) ===== -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#" aria-label="Baaz home">
+        <img src="assets/hero/baaz-logo.svg" width="153" height="26" alt="Baaz">
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav__menu">
+          <li><a class="nav__item is-active" href="#story" aria-current="page"><span class="nav__bracket" aria-hidden="true">[</span>STORY<span class="nav__bracket" aria-hidden="true">]</span></a></li>
+          <li><a class="nav__item" href="#smart-vehicle"><span class="nav__bracket" aria-hidden="true">[</span>SMART VEHICLE<span class="nav__bracket" aria-hidden="true">]</span></a></li>
+          <li><a class="nav__item" href="#smart-energy"><span class="nav__bracket" aria-hidden="true">[</span>SMART ENERGY<span class="nav__bracket" aria-hidden="true">]</span></a></li>
+          <li><a class="nav__item" href="#hawk-ai"><span class="nav__bracket" aria-hidden="true">[</span>HAWK AI<span class="nav__bracket" aria-hidden="true">]</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="hint">
+    <span>Scroll to descend</span>
+    <i></i>
+  </div>
+
+  <div id="progress"><b></b></div>
+
+  <div id="loader">
+    <span>Loading</span>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
